@@ -16,6 +16,14 @@
         transform: translateX(0);
     }
 }
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 .animate-up{
     animation-name: up;
     animation-duration: 1000ms;
@@ -24,4 +32,9 @@
 .animate-right{
     animation-name: right;
     animation-duration: 800ms;
+}
+.animate-appear{
+    animation-name: appear;
+    animation-duration: 300ms;
+    animation-fill-mode: backwards;
 }
