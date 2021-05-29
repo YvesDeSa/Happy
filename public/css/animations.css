@@ -26,15 +26,15 @@
 }
 .animate-up{
     animation-name: up;
-    animation-duration: 1000ms;
+    animation-duration: 150ms;
     animation-fill-mode: backwards;
 }
 .animate-right{
     animation-name: right;
-    animation-duration: 800ms;
+    animation-duration: 150ms;
 }
 .animate-appear{
     animation-name: appear;
-    animation-duration: 300ms;
+    animation-duration: 150ms;
     animation-fill-mode: backwards;
 }
