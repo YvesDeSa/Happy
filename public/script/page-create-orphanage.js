@@ -13,7 +13,6 @@ const icon = L.icon({
 })
 
 // create and add marker
-
 let marker;
 
 map.on('click', (event) => {
@@ -26,6 +25,7 @@ map.on('click', (event) => {
     // Remove icon
     marker && map.removeLayer(marker);
 
+    // add new icon 
     marker = L.marker([lat, lng], { icon })
     .addTo(map)
 })
@@ -62,7 +62,7 @@ function removePhotoField(event){
 
 // select yes or not
 
-function toggleSelect(event) {
+function toggleSelect(event) { 
 
     document.querySelectorAll('.button-select button')
     .forEach(button => button.classList.remove('active'))
