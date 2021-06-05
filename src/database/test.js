@@ -1,22 +1,12 @@
 const Database = require('./db');
+const saveOrphanage = require('./saveOrphanage');
 
 Database.then(async db => {
      // inserting data
-    await db.run(`
-        INSERT INTO orphanages (
-            lat,
-            lng,
-            name,
-            about,
-            whatsapp,
-            images,
-            instructions,
-            opening_on_hours,
-            open_on_weekends
-        ) VALUES (
-            ""
-        );
-    `);
+     
+    await saveOrphanage();
 
-    const selectedOphanage = await db.all("SELECT * FROM orphanages");
+    const selectedOrphanage = await db.all("SELECT * FROM orphanages");
+
+    const orphanage = await db.all('SELECT * FROM orphanages id = "1" ');
 });
