@@ -34,9 +34,26 @@
 		</aside>
 
 		<div id="mapid" class="animate-appear">
+
+			<div class="orphanages">
+
+				{{#each orphanages}}
+
+					<span hidden
+						data-id="{{this.id}}"
+						data-name="{{this.name}}"
+						data-lat="{{this.lat}}"
+						data-lng="{{this.lng}}"
+					></span>
+
+				{{/each}}
+
+			</div>
+
 			<a href="/create-orphanage" class="create-orphanage" title=" Cadastre um orfanato">
 				<img src="/img/plus.svg" alt="Criar orfanato">
 			</a>
+			
 		</div>
 	</div>
 
