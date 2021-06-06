@@ -12,7 +12,6 @@ module.exports = {
         const id = req.query.id;
 
         try {
-
             const db = await Database;
             const results = await db.all(`SELECT * FROM orphanages id = "${id}"`);
             const orphanage = results[0];
@@ -36,7 +35,7 @@ module.exports = {
         try{
 
             const db = await Database;
-            const orphanages = await db.all("SELECT * FROM or phanages");
+            const orphanages = await db.all("SELECT * FROM orphanages");
             return res.render('orphanages', { orphanages });
 
         }catch (error){
