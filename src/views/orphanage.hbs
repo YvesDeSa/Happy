@@ -52,9 +52,13 @@
 						<h1> {{orphanage.name}} </h1>
 						<p>{{orphanage.about}}</p>
 						<div class="map-container">
-								<div id="mapid">
+								<div id="mapid"></div>
 
-								</div>
+								<span hidden
+									data-lat="{{orphanage.lat}}"
+									data-lng="{{orphanage.lng}}"
+								></span>
+
 								<footer>
 									<a target="_blank" href="https://maps.google.com/mobile?q={{orphanage.lat}},{{orphanage.lng}}&z=15">Ver rotas no Google Maps</a>
 								</footer>
@@ -81,10 +85,11 @@
 							{{/if}}
 
 						</div>
-						<button type="button" class="primary-button">
+						<a href="https://api.whatsapp.com/send?l=pt_BR&phone={{orphanage.whatsapp}}&text=Oi, quero conversar sobre visita no {{orphanage.name}}"
+						   target="_blank" type="button" class="primary-button">
 								<img src="/img/whatsapp.svg" alt="Chamar no whatsapp">
 								Entra em contato						
-						</button>
+						</a>
 				</div>
 			</div>
 		</main>	

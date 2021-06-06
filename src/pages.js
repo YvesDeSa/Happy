@@ -19,7 +19,7 @@ module.exports = {
             orphanage.images = orphanage.images.split(",");
             orphanage.fistImage = orphanage.images[0];
 
-            orphanage.open_on_weekends === "1" ? true : false;
+            orphanage.open_on_weekends = orphanage.open_on_weekends == "1" ? true : false;
 
             return res.render('orphanage', { orphanage });
 
